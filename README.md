@@ -8,9 +8,10 @@ could bbbyb
 vinyl bgbby
 ```
 
-means there were 3 bets: water, could, and vinul and the system gave answers coded with:
-b - respective letter not present at all (black)
-y - letter is present in the word but in a different position
-g - letter is correctly guessed in correct position
+means there were 3 bets: water, could, and vinul and the system gave answers coded with:<br/>
+b - respective letter not present at all (black)<br/>
+y - letter is present in the word but in a different position (yellow)<br/>
+g - letter is correctly guessed in correct position (green)<br/>
+
 
 then run `./gradlew run` from the command line
