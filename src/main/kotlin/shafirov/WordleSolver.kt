@@ -4,9 +4,10 @@ import java.io.File
 import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
-    val dict = File(if ("--russian" in args) "data/ru.txt" else "data/en.txt").readLines()
+    val attempts = File("input.txt").readLines().map { it.lowercase().split(' ') }.filter { it.size == 2 }.map { it[0] to it[1] }
 
-    val attempts = File("input.txt").readLines().map { it.split(' ') }.filter { it.size == 2 }.map { it[0] to it[1] }
+    val isRussian = attempts.any {it.first.any { it in 'а' .. 'я' }}
+    val dict = File(if (isRussian) "data/ru.txt" else "data/en.txt").readLines()
 
     println("${attempts.size} attempts played:")
     for ((w, r) in attempts) {
