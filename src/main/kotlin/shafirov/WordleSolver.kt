@@ -3,8 +3,8 @@ package shafirov
 import java.io.File
 import kotlin.system.exitProcess
 
-fun main() {
-    val dict = File("data/words5.txt").readLines()
+fun main(args: Array<String>) {
+    val dict = File(if ("--russian" in args) "data/ru.txt" else "data/en.txt").readLines()
 
     val attempts = File("input.txt").readLines().map { it.split(' ') }.filter { it.size == 2 }.map { it[0] to it[1] }
 
