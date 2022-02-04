@@ -16,4 +16,4 @@ g - letter is correctly guessed in correct position (green)<br/>
 
 then run `./gradlew run` from the command line
 
-There is also a dictionary for Wordle in Russian. Use `./gradlew run --args="--russian"` to load it instead of the default.
+Supported dictionaries are English and Russian with automatic detection based on actual input.
